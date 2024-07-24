@@ -1,0 +1,397 @@
+/*Overall Details*/
+
+:root {
+    --bright-colour: rgb(243,108,33);
+    --primary-colour: rgb(31, 20, 63);
+    --light-colour: rgb(222,222,222);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    line-height: 1;
+}
+
+h1{
+    font-family: "Oswald", sans-serif;
+    font-weight:800;
+    font-size: 6rem;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-family: "Oswald", sans-serif;
+    line-height: 1;
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+h3{
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+}
+
+h4{
+    font-family: "Oswald", sans-serif;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    font-family: "Oswald", sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    scale: 1.1;
+    text-decoration: underline;
+}
+
+.box {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1rem solid var(--bright-colour);
+}
+
+.body {
+    position: relative;
+    top: 3rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-colour);
+}
+
+.heading {
+    color: var(--bright-colour);
+    margin-bottom: 1rem;
+}
+
+/*Header*/
+header{
+    display: inline-flex;
+    align-items: end;
+    justify-content: space-between;
+    width:100%;
+    background-color: var(--primary-colour);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    position: fixed;
+    border-bottom: 1rem solid var(--bright-colour);
+    z-index: 3;
+}
+
+#headerCompany{
+    display: inline-flex;
+    align-items: end;
+    color: white;
+}
+
+#headerCompany h2{
+    padding-right: 1rem;
+}
+
+#headerLogo{
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+nav img{
+    display: none;
+}
+
+nav{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    margin-left: 1rem;
+    text-align: center;
+}
+
+nav h4{
+    font-family: 'Alumni Sans';
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 0;
+}
+
+@media only screen and (max-width: 750px){
+    header{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #headerCompany{
+        flex-direction: row;
+        justify-content: left;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #headerCompany h2{
+        display: none;
+    }
+
+    #headerCompany h4{
+        display: none;
+    }
+}
+
+/*Mission*/
+
+#home{
+    background-color: rgb(212, 212, 189);
+    display:inline-flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width:100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    background-image:url(../images/Sunset.jpg);
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+#hero{
+    background-color: rgba(31, 20, 63, .6);;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+
+@media only screen and (max-width: 600px){
+    #hero h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #hero h1{
+        font-size: 4rem;
+    }
+    
+    #hero h3{
+        font-size: 1rem;
+    }
+}
+
+/*values*/
+
+#valuesContainer{
+    display: inline-flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.value h3{
+    font-size: 3rem;
+    text-shadow: 2px 2px black;
+    color:white;
+    padding: 0;
+}
+
+.value{
+    width: 32%;
+    height: 16rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+#valueA{
+    background-image: url(../images/values/build.jpg);
+}
+
+#valueB{
+    background-image: url(../images/values/research.jpg);
+}
+
+#valueC{
+    background-image: url(../images/values/destroy.jpeg);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.value:hover .overlay {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 750px){
+    #valuesContainer{
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+
+    .value{
+        width: 97%;
+        height: 200px;
+        margin: 0.5rem 0;
+    }
+}
+
+/*Our People*/
+
+#ourPeople{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    text-align: center;
+}
+
+#peopleContainer{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.person{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.person img{
+    width: 100%;
+}
+
+.person h3{
+    margin-top: 0.2rem;
+}
+
+@media only screen and (max-width: 550px){
+    #peopleContainer{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .person{
+        margin: 0.5rem;
+        width: 80%;
+    }
+}
+
+/* Project */
+#projectContainer {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+.project {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.project img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+@media only screen and (max-width: 800px){
+    #projectContainer{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .project{
+        margin: 0.5rem;
+        width: 80%;
+    }
+}
+
+/*footer*/
+footer{
+    position: relative;
+    padding: 0 1rem 1rem 1rem;
+    top: 1rem;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--primary-colour);
+    box-sizing: border-box;
+    color: white;
+}
+
+#footerLogo{
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+#footerCompany{
+    display: inline-flex;
+    align-items: end;
+}
