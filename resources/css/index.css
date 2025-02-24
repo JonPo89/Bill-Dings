@@ -12,7 +12,7 @@
 }
 
 body{
-    background-color: white;
+    background-color: #e9e9e9;
     padding: 0;
     margin: 0;
     display: inline-flex;
@@ -62,15 +62,18 @@ h4{
 
 a{
     font-family: "Oswald", sans-serif;
-    color: white;
-    text-decoration: none;
     margin: 0;
     padding: 0;
 }
 
-a:hover{
-    scale: 1.1;
-    text-decoration: underline;
+
+
+#navbar{
+    background-color: var(--primary-colour);
+}
+
+#navbar img{
+    height: 3rem;
 }
 
 .box {
@@ -152,321 +155,6 @@ header{
     margin-right: 0.5rem;
 }
 
-nav img{
-    display: none;
-}
-
-nav{
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-nav a{
-    margin-left: 1rem;
-    text-align: center;
-}
-
-nav h4{
-    font-family: 'Alumni Sans';
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 0;
-}
-
-@media only screen and (max-width: 750px){
-    header{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    #headerCompany{
-        flex-direction: row;
-        justify-content: left;
-        margin-bottom: 1rem;
-    }
-}
-
-@media only screen and (max-width: 450px){
-    #headerCompany h2{
-        display: none;
-    }
-
-    #headerCompany h4{
-        display: none;
-    }
-}
-
-/*Mission*/
-
-#home{
-    background-color: rgb(212, 212, 189);
-    display:inline-flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    width:100%;
-    height: 500px;
-    align-items: center;
-    justify-content: center;
-    background-image:url(../images/Sunset.jpg);
-    background-position:bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#hero{
-    background-color: white;
-    border-radius: 2rem;
-    padding: 4rem 2rem;
-    box-sizing: border-box;
-    width: 30rem;
-    text-align: center;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#hero h3{
-    margin-bottom: 1rem;
-}
-
-#hero p{
-    color: var(--bright-colour);
-    font-weight: 700;
-}
-
-
-@media only screen and (max-width: 600px){
-    #hero h3{
-        font-size: 1.5rem;
-    }
-
-    #hero{
-        width: 20rem;
-    }
-}
-
-@media only screen and (max-width: 450px){
-    #hero h1{
-        font-size: 4rem;
-    }
-    
-    #hero h3{
-        font-size: 1rem;
-    }
-}
-
-/*values*/
-
-#valuesContainer{
-    display: inline-flex;
-    justify-content: space-around;
-    width:100%; 
-}
-
-.value h2{
-    text-shadow: 2px 2px var(--primary-colour);
-    color:var(--bright-colour);
-    margin-bottom: 1rem;
-}
-
-.value{
-    width: 30%;
-    height: 16rem;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 2rem;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: var(--primary-colour);
-    background-color: rgba(255, 255, 255, 0.7);
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: opacity 0.3s;
-    opacity: 0;
-    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
-    border-radius: 2rem;
-}
-
-#valueA{
-    background-image: url(../images/values/build.jpg);
-}
-
-#valueB{
-    background-image: url(../images/values/research.jpg);
-}
-
-#valueC{
-    background-image: url(../images/values/destroy.jpeg);
-}
-
-.value:hover .overlay {
-    opacity: 1;
-}
-
-@media only screen and (max-width: 750px){
-    #valuesContainer{
-        flex-direction: column;
-        align-items: center;
-        width:100%;
-    }
-
-    .value{
-        width: 97%;
-        height: 200px;
-        margin: 0.5rem 0;
-    }
-}
-
-/*Our People*/
-
-#ourPeople{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width:100%;
-    text-align: center;
-}
-
-#peopleContainer{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.person{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    margin: 0 1rem;
-}
-
-.person img{
-    width: 100%;
-    border-radius: 2rem;
-}
-
-.person h3{
-    margin-top: 0.2rem;
-}
-
-@media only screen and (max-width: 750px){
-    #peopleContainer{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .person{
-        margin: 0.5rem;
-        width: 60%;
-    }
-}
-
-/* Project */
-#projectContainer {
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
-    
-}
-
-.project {
-    display: inline-flex;
-    align-items: start;
-    justify-content: space-between;
-    width: 90vw;
-    height: 30vw;
-    background-color: var(--bright-colour);
-    border-radius: 2rem;
-    overflow: hidden;
-    margin-bottom: 2rem;
-}
-
-.project h3{
-    margin-bottom: 2rem;
-}
-
-.projectImage{
-    width: 66%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.projectImage img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    object-position:center;
-}
-
-.projectDescriptionRight {
-    color: white;
-    padding: 2rem;
-    box-sizing: border-box;
-    text-align: left;
-    width: 33%;
-}
-
-.projectDescriptionLeft {
-    color: white;
-    padding: 2rem;
-    box-sizing: border-box;
-    text-align: right;
-    width: 33%;
-}
-
-@media only screen and (max-width: 950px){
-    .projectImage {
-        width: 50%;
-    }
-
-    .projectDescriptionRight{
-        width: 50%;
-    }
-
-    .projectDescriptionLeft{
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 750px){
-    .project{
-        flex-direction: column;
-        width: 90vw;
-        height: 150vw;
-    }
-
-    .projectImage {
-        width: 100%;
-        height: 66%;
-    }
-
-    .projectDescriptionLeft{
-        width: 100%;
-        text-align: left;
-    }
-
-    .projectDescriptionRight{
-        width: 100%;
-
-    }
-}
 
 /*footer*/
 footer{
@@ -475,7 +163,7 @@ footer{
     top: 1rem;
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 2rem;
     background-color: var(--primary-colour);
@@ -483,12 +171,3 @@ footer{
     color: white;
 }
 
-#footerLogo{
-    height: 2rem;
-    margin-right: 0.5rem;
-}
-
-#footerCompany{
-    display: inline-flex;
-    align-items: end;
-}
